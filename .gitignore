@@ -1,0 +1,15 @@
+# .gitignore
+.env
+__pycache__/
+node_modules/
+venv/
+*.pyc
+db_data/
+understand.txt
+
+.env
+venv/
+__pycache__/
+node_modules/
+*.pyc
+chroma_db/
