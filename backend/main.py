@@ -4,6 +4,7 @@ from typing import List
 from app.service.news_service import fetch_news, filter_news_by_interests
 from app.service.llm_service import generate_summary
 from app.service.vector_service import store_news,query_news
+from app.service.email_service import send_email
 
 app = FastAPI()
 
@@ -25,8 +26,13 @@ def generate_news(user: UserRequest):
         user.interests
     )
 
+    send_email(
+        to_email=user.email,
+        subject="🚀 Your Daily Tech News",
+        content=summary
+    )
+
     return {
-        "user": user,
-        "retrieved_news": relevant_news,
+        "message":"News send to email",
         "summary": summary
     }
