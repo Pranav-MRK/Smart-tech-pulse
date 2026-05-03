@@ -23,7 +23,7 @@ Fetch → Embed → Store → Retrieve → Summarize
 - [x] Backend API
 - [x] News ingestion
 - [x] RAG pipeline
-- [ ] Email automation
-- [ ] PostgreSQL
+- [x] Email automation
+- [x] PostgreSQL
 - [ ] Frontend
 - [ ] Docker
